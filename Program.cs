@@ -13,7 +13,7 @@ async Task<Dictionary<string, byte[]>> ParseArgs(string[] cliArgs)
         throw new ArgumentException("Usage: img-edit.exe <image path/url> <image path/url> ...");
     }
 
-    List<Uri> uris = cliArgs.Aggregate(new List<Uri>(), (acc, path) =>
+    var uris = cliArgs.Aggregate(new List<Uri>(), (acc, path) =>
     {
         string validatedPath = File.Exists(path) ? Path.GetFullPath(path) : path;
         bool isValidUri = Uri.TryCreate(validatedPath, UriKind.Absolute, out var uri);
@@ -25,7 +25,7 @@ async Task<Dictionary<string, byte[]>> ParseArgs(string[] cliArgs)
 
         Console.Error.WriteLine(getInvalidPathError(path));
         return acc;
-    }).ToList();
+    }).AsEnumerable();
 
     var files = new Dictionary<string, byte[]>();
     int nameCounter = 1;
@@ -93,6 +93,7 @@ void ConvertImage(string filename, byte[] imageContent)
 
 var images = await ParseArgs(args);
 Directory.CreateDirectory(OUT_DIR);
+
 foreach (var image in images)
 {
     ConvertImage(image.Key, image.Value);

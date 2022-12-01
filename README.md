@@ -5,3 +5,11 @@ Console app that converts 1 row/1:1 ratio sprites, to an animated image, GIF or 
 |Before|![](test.png)|
 |----|----|
 |After|![](output/1_test.webp)|
+
+## Usage
+
+The app accepts both local paths or http uris that point to a file.
+
+`dotnet run <path or uri> <...>`
+
+`dotnet run /cool-sprite.png https://coolurl.com/cool-sprite.png`

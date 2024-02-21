@@ -12,4 +12,4 @@ The app accepts both local paths or http uris that point to a file.
 
 `dotnet run <path or uri> <...>`
 
-`dotnet run /cool-sprite.png https://coolurl.com/cool-sprite.png`
+`dotnet run /cool-sprite.png` / `dotnet run https://coolurl.com/cool-sprite.png`

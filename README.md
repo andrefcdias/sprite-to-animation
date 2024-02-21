@@ -2,9 +2,9 @@
 
 Console app that converts 1 row/1:1 ratio sprites, to an animated image, GIF or WebP, with ImageMagick.
 
-| Before | ![](test.png)  |
+| Before | ![horizontal sprite of a green dinosaur walking](test.png)  |
 | ------ | -------------- |
-| After  | ![](test.webp) |
+| After  | ![animated green dinosaur walking](test.webp) |
 
 ## Usage
 

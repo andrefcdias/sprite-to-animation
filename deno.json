@@ -5,6 +5,7 @@
   "nodeModulesDir": "auto",
   "imports": {
     "@imagemagick/magick-wasm": "npm:@imagemagick/magick-wasm@^0.0.31",
+    "@std/cli": "jsr:@std/cli@^1.0.6",
     "@std/fs": "jsr:@std/fs@^1.0.5",
     "@std/path": "jsr:@std/path@1",
     "sharp": "npm:sharp@^0.33.5",

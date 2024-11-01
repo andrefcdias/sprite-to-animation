@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@imagemagick/magick-wasm": "npm:@imagemagick/magick-wasm@^0.0.31",
+    "@std/fs": "jsr:@std/fs@^1.0.5",
+    "@std/path": "jsr:@std/path@1",
+    "sharp": "npm:sharp@^0.33.5",
+    "sharp-gif": "npm:sharp-gif@^0.1.7"
+  }
+}

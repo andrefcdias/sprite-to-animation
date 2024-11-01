@@ -9,5 +9,10 @@
     "@std/path": "jsr:@std/path@1",
     "sharp": "npm:sharp@^0.33.5",
     "sharp-gif": "npm:sharp-gif@^0.1.7"
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["no-empty"]
+    }
   }
 }
